@@ -4,10 +4,8 @@
   </div>
   <div class="row">
     Выберите город:
-    <select class="">
-      <option value="">Краснодар</option>
-      <option value="">Москва</option>
-      <option value="">Дубай</option>
+    <select ng-model="$ctrl.chosenCity">
+      <option ng-repeat="city in $ctrl.cityList" value="{{city.woeid}}">{{city.name}}</option>
     </select>
   </div>
 
