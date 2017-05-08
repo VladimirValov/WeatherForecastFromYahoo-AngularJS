@@ -6,11 +6,21 @@ angular.
     templateUrl: 'weather-forecast/weather-forecast.template.html',
     controller: ['YahooWeather',
       function WeatherForecast(YahooWeather) {
-      //  this.currentCity = "Краснодар";
+        this.cityList = [
+          {"name": "Krasnodar","woeid": "2028717"},
+          {"name": "Sochi",    "woeid": "2086230"},
+          {"name": "Moscow",   "woeid": "2122265"},
+          {"name": "New York", "woeid": "2459115"},
+          {"name": "Dubai",    "woeid": "1940345"}
+        ];
+        //City by Default;
+        this.chosenCity = this.cityList[0].woeid;
+
+        console.log( this.chosenCity );
 
         var self = this;
 
-        this.api = YahooWeather.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nome%2C%20ak%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys',
+        this.api = YahooWeather.get({city : '2028717' },
           function(data) {
             let channel = data.query.results.channel;
 
@@ -23,12 +33,8 @@ angular.
             self.wind = channel.wind;
             self.atmosphere = channel.atmosphere;
             self.astronomy = channel.astronomy;
-
           }
-
       );
-
-      console.log( self.api );
 
 
     }]
