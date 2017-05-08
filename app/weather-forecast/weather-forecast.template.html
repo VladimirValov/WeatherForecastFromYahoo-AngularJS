@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <h1> Погода в Краснодаре на 10 дней </h1>
+    <h1> Погода в городе {{ $ctrl.currentCity }} на 10 дней </h1>
   </div>
   <div class="row">
     Выберите город:
@@ -11,65 +11,50 @@
     </select>
   </div>
 
+
+
   <div class="row">
     <div class="">
-      Время <span>17:33</span>, Дата: <span>07.05.2017</span>
+      {{ $ctrl.lastBuildDate }}
     </div>
   </div>
-  <div class="row current_weather">
+
+  <div class="row current-weather">
     <div class="t">
-      +18C
+      {{ "+" + $ctrl.currentWeather.temp + "°C" }}
     </div>
     <div class="sky">
-      Солнечно
+      {{ $ctrl.currentWeather.text }}
     </div>
     <div class="info">
       <ul>
-        <li>Ветер: Северный</li>
-        <li>Влажность: 80%</li>
-        <li>Давление: 750 мм.рт</li>
+        <li><span>Восход:</span> {{ $ctrl.astronomy.sunrise }}, <span>Закат:</span> {{ $ctrl.astronomy.sunset }} </li>
+        <li><span>Ветер:</span> {{ $ctrl.wind.speed + "м/с" }} </li>
+        <li><span>Влажность:</span> {{ $ctrl.atmosphere.humidity + "%" }} </li>
+        <li><span> Давление:</span> {{ $ctrl.atmosphere.pressure + " мм рт. ст." }} </li>
       </ul>
     </div>
   </div>
 
   <div class="row">
-    <table class="forecast-10">
-      <thead class ="forecast-10-head">
-        <tr>
-          <td colspan="4"></td> <td>Ветер</td> <td>Влажность</td> <td>Давление</td>
-        </tr>
-      </thead>
 
-      <tbody>
-        <tr>
-          <td>	04 May 2017 </td> <td>	Thu	</td> <td>36</td> <td>Sunny</td> <td>Северный</td> <td>80%</td> <td>750 мм.рт</td>
-        </tr>
-        <tr>
-          <td>	04 May 2017 </td> <td>	Thu	</td> <td>36</td> <td>Sunny</td> <td>Северный</td> <td>80%</td> <td>750 мм.рт</td>
-        </tr>
-        <tr>
-          <td>	04 May 2017 </td> <td>	Thu	</td> <td>36</td> <td>Sunny</td> <td>Северный</td> <td>80%</td> <td>750 мм.рт</td>
-        </tr>
-        <tr>
-          <td>	04 May 2017 </td> <td>	Thu	</td> <td>36</td> <td>Sunny</td> <td>Северный</td> <td>80%</td> <td>750 мм.рт</td>
-        </tr>
-        <tr>
-          <td>	04 May 2017 </td> <td>	Thu	</td> <td>36</td> <td>Sunny</td> <td>Северный</td> <td>80%</td> <td>750 мм.рт</td>
-        </tr>
-        <tr>
-          <td>	04 May 2017 </td> <td>	Thu	</td> <td>36</td> <td>Sunny</td> <td>Северный</td> <td>80%</td> <td>750 мм.рт</td>
-        </tr>
-        <tr>
-          <td>	04 May 2017 </td> <td>	Thu	</td> <td>36</td> <td>Sunny</td> <td>Северный</td> <td>80%</td> <td>750 мм.рт</td>
-        </tr>
-        <tr>
-          <td>	04 May 2017 </td> <td>	Thu	</td> <td>36</td> <td>Sunny</td> <td>Северный</td> <td>80%</td> <td>750 мм.рт</td>
-        </tr>
-        <tr>
-          <td>	04 May 2017 </td> <td>	Thu	</td> <td>36</td> <td>Sunny</td> <td>Северный</td> <td>80%</td> <td>750 мм.рт</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table class="forecast-10 ">
+    <thead class ="forecast-10-head">
+      <tr>
+        <td colspan="2"></td> <td>High °C</td> <td>Low °C</td> <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="day in $ctrl.forecast" class="forecast-10" >
+       <td>	{{ day.date }} </td>
+       <td> {{ day.day	}} </td>
+       <td> {{ day.high }} </td>
+       <td> {{ day.low  }} </td>
+       <td> {{ day.text }} </td>
+     </tr>
+    </tbody>
+
+  </table>
+</div>
 
 </div>
