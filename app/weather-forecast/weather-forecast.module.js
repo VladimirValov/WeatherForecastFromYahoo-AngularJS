@@ -1,3 +1,5 @@
 'use strict';
 
-angular.module('weatherForecast',[]);
+angular.module('weatherForecast',[
+  'api-yahoo'
+]);
