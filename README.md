@@ -1,10 +1,19 @@
 
-Hello!
+#Hello!
 
-В данном проекте не будет использовано тестирование.
+В данном проекте реализован простой погодный сайт на AngularJS с использованием Yahoo Weather API
 
-План:
-1) Подготовка проекта
-2) Статический Макет сайта
-3) Подключить Ангулар с использованием JSON файла
-4) Взять данные с Api
+This project implements a simple weather site on AngularJS using the Yahoo Weather API
+
+##В данном проекте НЕ использовано:
+ * Тестирование.
+ * HTML, CSS Frameworks
+ * Препроцессоры CSS
+
+##Install with :
+
+[`npm install`]
+
+[`npm start`]
+
+http://localhost:8000/

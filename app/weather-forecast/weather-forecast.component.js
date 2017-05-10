@@ -15,23 +15,34 @@ angular.
         ];
         //City by Default;
         this.chosenCity = this.cityList[0].woeid;
+        this.status = "Data loading from Yahoo";
+        this.attempt = 1;  //Попытка получения данных
 
         //Data Forecast from Api
-        this.channel ;
+        this.channel;
+
 
         this.GetWeatherFromYahoo = function( woeidCurrent = this.chosenCity ) {
           console.log("woeidCurrent =" + woeidCurrent);
+
           var self = this;
+          self.status = self.attempt + " Request the data from Yahoo Weather";
 
           YahooWeather.get({woeid : woeidCurrent },
             function(data) {
               if(data.query.results) {
                 self.channel = data.query.results.channel;
+                self.attempt = 1;
+
                 console.log("Получены корректные данные");
+                self.status = self.channel.lastBuildDate;
                 console.log(self.channel);
               }
               else {
                 console.log("Сервис данные не предоставил");
+                self.attempt ++;
+              //  self.status = "Re-request the data from Yahoo Weather";
+
                 self.GetWeatherFromYahoo(self.chosenCity);
               }
             }

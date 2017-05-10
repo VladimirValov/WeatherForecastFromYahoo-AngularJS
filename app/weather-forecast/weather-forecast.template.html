@@ -1,56 +1,63 @@
-<div class="container-fluid">
+<div class="container flex flex-column">
   <div class="row">
-    <h1> The Weather forecast for the next 10 days in {{ $ctrl.channel.location.city }} </h1>
+    <h1> Weather Forecast for 10 day </h1>
+	 <div class="row">
+	   <div class="cur-city">{{ $ctrl.channel.location.city }}</div>
+	 </div>
   </div>
-  <div class="row">
-    Choose a city:
+    <div class="row">
+   <div class="">{{ $ctrl.status }}</div>
+  </div>
+
+
+  <div class="row chose-city">
+    Выберите город:
     <select ng-model="$ctrl.chosenCity" ng-change="$ctrl.GetWeatherFromYahoo( )" >
       <option ng-repeat="city in $ctrl.cityList" value="{{city.woeid}}">{{city.name}}</option>
     </select>
   </div>
+</div>
 
-  <div class="row">
-    <div class="">
-      {{ $ctrl.channel.lastBuildDate }}
-    </div>
-  </div>
 
-  <div class="row current-weather">
-    <div class="t">
-      {{ "+" + $ctrl.channel.item.condition.temp + "°C" }}
+<div class="container flex curent-weather">
+
+    <div class="row t">
+       {{ "+" + $ctrl.channel.item.condition.temp + "°F" }}
     </div>
-    <div class="sky">
+    <div class="row sky">
       {{ $ctrl.channel.item.condition.text }}
     </div>
-    <div class="info">
+    <div class="row info">
       <ul>
-        <li><span>Восход:</span> {{ $ctrl.channel.astronomy.sunrise }}, <span>Закат:</span> {{ $ctrl.channel.astronomy.sunset }} </li>
-        <li><span>Ветер:</span> {{ $ctrl.channel.wind.speed + "м/с" }} </li>
-        <li><span>Влажность:</span> {{ $ctrl.channel.atmosphere.humidity + "%" }} </li>
-        <li><span> Давление:</span> {{ $ctrl.channel.atmosphere.pressure + " мм рт. ст." }} </li>
+        <li><span>Восход : </span>{{ $ctrl.channel.astronomy.sunrise }}</li>
+		<li><span>Закат : </span>{{ $ctrl.channel.astronomy.sunset }}</li>
+        <li><span>Ветер :  </span>{{ $ctrl.channel.wind.speed + "m/s" }}</li>
+        <li><span>Влажность : </span>{{ $ctrl.channel.atmosphere.humidity + "%"}}</li>
+        <li><span> Давление : </span>{{ $ctrl.channel.atmosphere.pressure + " in"}}</li>
       </ul>
     </div>
-  </div>
+
+</div>
+
+<div class="container flex">
 
   <div class="row">
-
   <table class="forecast-10 ">
     <thead class ="forecast-10-head">
       <tr>
-        <td colspan="2"></td> <td>High °C</td> <td>Low °C</td> <td></td>
+        <td>&nbsp;</td><td>&nbsp;</td><td>High°F</td> <td>Low°F</td><td>&nbsp;</td>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="day in $ctrl.channel.item.forecast" class="forecast-10" >
-       <td>	{{ day.date }} </td>
-       <td> {{ day.day	}} </td>
-       <td> {{ day.high }} </td>
-       <td> {{ day.low  }} </td>
-       <td> {{ day.text }} </td>
+  	 <tr ng-repeat="day in $ctrl.channel.item.forecast" class="forecast-10" >
+       <td>{{ day.date }}</td>
+       <td>{{ day.day }}</td>
+       <td>{{ day.high }}</td>
+       <td>{{ day.low }}</td>
+       <td>{{ day.text }}</td>
      </tr>
     </tbody>
 
   </table>
-</div>
-
+  </div>
 </div>
