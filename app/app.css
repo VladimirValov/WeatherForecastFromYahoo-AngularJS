@@ -1,6 +1,10 @@
 /* app css stylesheet */
 .container-fluid {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
+}
+h1{
+  text-align: center;
 }
 .row {
   min-height: 50px;

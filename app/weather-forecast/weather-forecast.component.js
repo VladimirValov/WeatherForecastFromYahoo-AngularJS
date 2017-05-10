@@ -16,26 +16,29 @@ angular.
         //City by Default;
         this.chosenCity = this.cityList[0].woeid;
 
-        console.log( this.chosenCity );
+        //Data Forecast from Api
+        this.channel ;
 
-        var self = this;
+        this.GetWeatherFromYahoo = function( woeidCurrent = this.chosenCity ) {
+          console.log("woeidCurrent =" + woeidCurrent);
+          var self = this;
 
-        this.api = YahooWeather.get({city : '2028717' },
-          function(data) {
-            let channel = data.query.results.channel;
+          YahooWeather.get({woeid : woeidCurrent },
+            function(data) {
+              if(data.query.results) {
+                self.channel = data.query.results.channel;
+                console.log("Получены корректные данные");
+                console.log(self.channel);
+              }
+              else {
+                console.log("Сервис данные не предоставил");
+                self.GetWeatherFromYahoo(self.chosenCity);
+              }
+            }
+          );
+        }
 
-            self.location = channel.location;
-            self.currentCity = self.location.city;
-
-            self.forecast = channel.item.forecast;
-            self.lastBuildDate = channel.lastBuildDate;
-            self.currentWeather = channel.item.condition;
-            self.wind = channel.wind;
-            self.atmosphere = channel.atmosphere;
-            self.astronomy = channel.astronomy;
-          }
-      );
-
-
+        //Default Krasnodar
+        this.GetWeatherFromYahoo();
     }]
   });
