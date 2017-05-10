@@ -11,10 +11,19 @@ This project implements a simple weather site on AngularJS using the Yahoo Weath
  * Препроцессоры CSS
  * Ветвление
 
-## Install with :
+### Clone the repo:
 
-[`npm install`]
+`git clone https://github.com/VladimirValov/WeatherForecastFromYahoo-AngularJS.git`
 
-[`npm start`]
+### Install:
 
+`npm install`
+
+### Start:
+
+`npm start`
+
+### Open:
 http://localhost:8000/
+
+<img src="WeatherForecastFromYahoo.jpg">
