@@ -7,8 +7,8 @@ angular.
             '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
 
 
-            //Comment this for get data fromAPI  
-            urlApi = 'API-QUERY.json';
+            //Comment this for get data fromAPI
+            //urlApi = 'API-QUERY.json';
 
 
         return $resource(urlApi, {woeid : '2028717' }, {
