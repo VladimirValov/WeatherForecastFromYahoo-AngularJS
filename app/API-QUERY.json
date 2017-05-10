@@ -1,0 +1,149 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2017-05-08T13:38:06Z",
+  "lang": "ru-RU",
+  "results": {
+   "channel": {
+    "units": {
+     "distance": "mi",
+     "pressure": "in",
+     "speed": "mph",
+     "temperature": "F"
+    },
+    "title": "Yahoo! Weather - Krasnodar, Krasnodar Krai, RU",
+    "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2028717/",
+    "description": "Yahoo! Weather for Krasnodar, Krasnodar Krai, RU",
+    "language": "en-us",
+    "lastBuildDate": "Mon, 08 May 2017 04:38 PM MSK",
+    "ttl": "60",
+    "location": {
+     "city": "Krasnodar",
+     "country": "Russia",
+     "region": " Krasnodar Krai"
+    },
+    "wind": {
+     "chill": "70",
+     "direction": "210",
+     "speed": "25"
+    },
+    "atmosphere": {
+     "humidity": "53",
+     "pressure": "1003.0",
+     "rising": "0",
+     "visibility": "16.1"
+    },
+    "astronomy": {
+     "sunrise": "5:3 am",
+     "sunset": "7:39 pm"
+    },
+    "image": {
+     "title": "Yahoo! Weather",
+     "width": "142",
+     "height": "18",
+     "link": "http://weather.yahoo.com",
+     "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+    },
+    "item": {
+     "title": "Conditions for Krasnodar, Krasnodar Krai, RU at 04:00 PM MSK",
+     "lat": "45.059849",
+     "long": "39.004379",
+     "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2028717/",
+     "pubDate": "Mon, 08 May 2017 04:00 PM MSK",
+     "condition": {
+      "code": "23",
+      "date": "Mon, 08 May 2017 04:00 PM MSK",
+      "temp": "69",
+      "text": "Breezy"
+     },
+     "forecast": [
+      {
+       "code": "12",
+       "date": "08 May 2017",
+       "day": "Mon",
+       "high": "68",
+       "low": "54",
+       "text": "Rain"
+      },
+      {
+       "code": "39",
+       "date": "09 May 2017",
+       "day": "Tue",
+       "high": "68",
+       "low": "55",
+       "text": "Scattered Showers"
+      },
+      {
+       "code": "11",
+       "date": "10 May 2017",
+       "day": "Wed",
+       "high": "69",
+       "low": "54",
+       "text": "Showers"
+      },
+      {
+       "code": "12",
+       "date": "11 May 2017",
+       "day": "Thu",
+       "high": "62",
+       "low": "47",
+       "text": "Rain"
+      },
+      {
+       "code": "30",
+       "date": "12 May 2017",
+       "day": "Fri",
+       "high": "69",
+       "low": "42",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "28",
+       "date": "13 May 2017",
+       "day": "Sat",
+       "high": "72",
+       "low": "46",
+       "text": "Mostly Cloudy"
+      },
+      {
+       "code": "30",
+       "date": "14 May 2017",
+       "day": "Sun",
+       "high": "71",
+       "low": "51",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "30",
+       "date": "15 May 2017",
+       "day": "Mon",
+       "high": "70",
+       "low": "51",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "28",
+       "date": "16 May 2017",
+       "day": "Tue",
+       "high": "67",
+       "low": "50",
+       "text": "Mostly Cloudy"
+      },
+      {
+       "code": "30",
+       "date": "17 May 2017",
+       "day": "Wed",
+       "high": "70",
+       "low": "49",
+       "text": "Partly Cloudy"
+      }
+     ],
+     "description": "<![CDATA[<img src=\"http://l.yimg.com/a/i/us/we/52/23.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR />Breezy\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Mon - Rain. High: 68Low: 54\n<BR /> Tue - Scattered Showers. High: 68Low: 55\n<BR /> Wed - Showers. High: 69Low: 54\n<BR /> Thu - Rain. High: 62Low: 47\n<BR /> Fri - Partly Cloudy. High: 69Low: 42\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2028717/\">Full Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)\n<BR />\n]]>",
+     "guid": {
+      "isPermaLink": "false"
+     }
+    }
+   }
+  }
+ }
+}

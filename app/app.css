@@ -1,0 +1,125 @@
+/* app css stylesheet */
+body{
+  background: #fafafa;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #757575;
+}
+
+h1 {
+  font-size: 1.5rem;
+  word-wrap: break-word;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+  background: #fff;
+  width: 96%;
+  min-width: 300px;
+  max-width: 600px;
+  margin: 15px auto;
+  word-wrap: break-all;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  z-index:3;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+/*
+@media (max-width: 30rem ) {
+	.flex  {
+		flex-direction: column;
+	}
+}
+*/
+.row {
+	width:100%;
+  word-wrap: break-all;
+}
+
+.cur-city{
+	font-size:3rem;
+	padding-bottom: 20px;
+	color: #039be5;
+
+}
+.chose-city {
+	padding: 20px 0;
+}
+
+.curent-weather {
+  background-color: #039be5;
+  padding: 10px 0;
+  height: 147px;
+  color: #FFFFFF;
+}
+
+.t, .sky, .info {
+  word-wrap: break-all;
+  color: #FFFFFF;
+}
+
+.t {
+  width:27%;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+ .sky  {
+  width:23%;
+  text-align: left;
+}
+
+.info {
+	width:50%;
+	font-weight:bold;
+}
+.info li {
+  text-align: left;
+  list-style-type: none;
+}
+.info span {
+color: #DDD;
+}
+
+.forecast-10 {
+	width: 100%;
+	margin: 10px auto;
+}
+.forecast-10  td{
+  padding: 10px 0;
+  text-align: center;
+  vertical-align: middle;
+
+}
+.forecast-10-head  td {
+  padding: 0;
+  font-size: 0.7rem;
+}
+
+td.data {
+	width: 33%;
+}
+td.day {
+	width: 10%;
+}
+td.high, td.low {
+	width: 12%;
+}
+td.text {
+	width:33%;
+}
